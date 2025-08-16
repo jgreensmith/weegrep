@@ -8,7 +8,10 @@ pub fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
     }
     v
 }
-pub fn search_case_insensitive<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
+pub fn search_case_insensitive<'a>(
+    query: &str, 
+    contents: &'a str
+) -> Vec<&'a str> {
     let mut v = Vec::new();
     for line in contents.lines(){
         let l = line.to_lowercase();
